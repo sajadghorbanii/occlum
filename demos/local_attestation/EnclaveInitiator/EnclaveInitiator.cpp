@@ -70,8 +70,8 @@ uint32_t test_message_exchange()
     target_fn_id = 0;
     msg_type = MESSAGE_EXCHANGE;
     max_out_buff_size = 50; // it's assumed the maximum payload size in response message is 50 bytes, it's for demontration purpose
-    secret_data = 0x12345678; //Secret Data here is shown only for purpose of demonstration.
-
+    //secret_data = 0x12345678; //Secret Data here is shown only for purpose of demonstration.
+    secret_data = 50;// size off secret msg 
     //Marshals the secret data into a buffer
     ke_status = marshal_message_exchange_request(target_fn_id, msg_type, secret_data, &marshalled_inp_buff, &marshalled_inp_buff_len);
     if(ke_status != SUCCESS)

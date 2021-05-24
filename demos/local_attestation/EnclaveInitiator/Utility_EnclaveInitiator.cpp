@@ -149,7 +149,7 @@ uint32_t marshal_message_exchange_request(uint32_t target_fn_id, uint32_t msg_ty
     size_t secret_data_len, ms_len;
     if(!marshalled_buff_len)
         return INVALID_PARAMETER_ERROR;
-    secret_data_len = sizeof(secret_data);
+    secret_data_len =(size_t) secret_data;
     ms_len = sizeof(ms_in_msg_exchange_t) + secret_data_len;
     ms = (ms_in_msg_exchange_t *)malloc(ms_len);
     if(!ms)
